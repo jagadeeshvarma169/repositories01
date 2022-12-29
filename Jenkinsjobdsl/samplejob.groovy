@@ -1,6 +1,6 @@
 job('example') {
    scm {
-     github( 'jenkinsci/job-dsl-plugin', 'main')
+     github( 'jenkinsci/job-dsl-plugin', 'master')
     }
     triggers {
         githubpush()
