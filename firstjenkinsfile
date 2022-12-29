@@ -1,0 +1,26 @@
+pipeline {
+   agent any
+      
+      stages {
+        stage("Print") {
+          steps {
+          echo "Hello world"
+                 }
+              }
+        stage("checkout") {
+          steps {
+          
+                 }
+              }
+         stage("Build") {
+          steps {
+             sh 'mvn build verify'
+                 }
+              }
+           }
+          post {
+           always {
+            echo "Thank you for running the job"
+         }
+      }
+    }
