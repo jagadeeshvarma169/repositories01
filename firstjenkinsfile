@@ -9,7 +9,7 @@ pipeline {
               }
         stage("checkout") {
           steps {
-          
+             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/jagadeeshvarma169/repositories01.git']]])
                  }
               }
          stage("Build") {
